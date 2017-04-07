@@ -1,0 +1,11 @@
+controllerPackage: io.swagger.handler
+modelPackage:  io.swagger.model
+swaggerUrl: ./src/main/swagger/swagger.yaml
+modelMappings:
+  # to enable explicit mappings, use this syntax:
+  DefinitionFromSwaggerSpecification: fully.qualified.path.to.Model
+  
+entityProcessors:
+  - json
+  - xml
+  - yaml

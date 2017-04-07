@@ -1,0 +1,8 @@
+---
+swagger: "2.0"
+info:
+  description: "Converts a 1.x, 2.0 swagger definition to the 3.0.0 format"
+  version: "1.0.0"
+  title: "Swagger Spec Converter"
+paths: {}
+definitions: {}
