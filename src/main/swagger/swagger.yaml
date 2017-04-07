@@ -1,49 +1,51 @@
----
-swagger: "2.0"
+swagger: '2.0'
 info:
-  description: "Converts a 1.x, 2.0 swagger definition to the 3.0.0 format"
-  version: "1.0.0"
-  title: "Swagger Spec Converter"
-basePath: "/api"
+  version: '1.0.0'
+  title: 'Swagger Spec Converter'
+  description: 'Converts a 1.x, 2.0 swagger definition to the 3.0.0 format'
 paths:
   /convert:
     post:
       tags:
-      - "Spec Converter"
-      summary: "Convert a swagger definition"
-      description: "Converts the supplied payload to a 3.0 specification\n\n* If a\
-        \ `url` query parameter is supplied, the content\nwill be loaded from that\
-        \ location.\n\n* If a `body` parameter is supplied, it will be used \ninstead.\
-        \  If both are provided, the `body` parameter \nwill be used.\n\n* If neither\
-        \ a `body` or `url` query parameter are\nsupplied, a `400` error code will\
-        \ be returned\n"
-      operationId: "convert"
+      - Spec Converter
+      summary: Convert a swagger definition
+      operationId: convert
+      description: |
+        Converts the supplied payload to a 3.0 specification
+        
+        * If a `url` query parameter is supplied, the content
+        will be loaded from that location.
+        
+        * If a `body` parameter is supplied, it will be used 
+        instead.  If both are provided, the `body` parameter 
+        will be used.
+        
+        * If neither a `body` or `url` query parameter are
+        supplied, a `400` error code will be returned
+        
       parameters:
-      - in: "body"
-        name: "inputSpec"
-        description: "the specification to convert"
-        required: false
-        schema:
-          type: "object"
-      - name: "url"
-        in: "query"
-        description: "A URL to the swagger definition"
-        required: false
-        type: "string"
-        format: "uri"
+        - in: body
+          name: inputSpec
+          description: the specification to convert
+          schema:
+            type: object
+          required: false
+        - in: query
+          name: url
+          description: A URL to the swagger definition
+          type: string
+          format: uri
+          required: false
       responses:
         200:
-          description: "successfully converted schema"
+          description: successfully converted schema
           schema:
-            type: "object"
-            properties: {}
+            type: object
         400:
-          description: "invaild input schema, or could not be converted\n"
+          description: |
+            invaild input schema, or could not be converted
           schema:
-            type: "array"
-            description: "error messages"
+            type: array
+            description: error messages
             items:
-              type: "string"
-      x-contentType: "application/json"
-      x-accepts: "application/json"
-definitions: {}
+              type: string

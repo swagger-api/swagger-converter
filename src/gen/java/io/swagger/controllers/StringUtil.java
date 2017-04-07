@@ -1,4 +1,4 @@
-package io.swagger.handler;
+package io.swagger.controllers;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaInflectorServerCodegen", date = "2017-04-07T14:38:28.915Z")
 public class StringUtil {
