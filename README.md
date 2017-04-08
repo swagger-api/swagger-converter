@@ -1,3 +1,2 @@
 # swagger-spec-converter
 
-
