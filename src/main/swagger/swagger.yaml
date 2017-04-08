@@ -8,7 +8,7 @@ paths:
   /convert:
     get:
       tags:
-      - "Spec Converter"
+      - "Converter"
       summary: "Convert a swagger definition"
       description: "Converts the supplied payload to a 3.0 specification\nbased on\
         \ a `url` parameter, which points to a older\nspecification version\n"
@@ -37,7 +37,7 @@ paths:
       x-accepts: "application/json"
     post:
       tags:
-      - "Spec Converter"
+      - "Converter"
       summary: "Convert a swagger definition"
       description: "Converts the supplied payload to a 3.0 specification\nbased on\
         \ an input specification\n"
