@@ -5,6 +5,7 @@ import io.swagger.inflector.models.RequestContext;
 import io.swagger.inflector.models.ResponseContext;
 import io.swagger.parser.OpenAPIParser;
 import io.swagger.parser.models.SwaggerParseResult;
+import v2.io.swagger.util.Json;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -16,8 +17,8 @@ public class ConverterController {
             return new ResponseContext()
                     .status(Response.Status.BAD_REQUEST)
                     .entity( "No specification supplied in either the url or request body.  Try again?" );
-        }
-        String inputAsString = inputSpec.toString();
+            }
+        String inputAsString = Json.pretty(inputSpec);
         SwaggerParseResult output = new OpenAPIParser().readContents(inputAsString, null, null);
         if(output == null) {
             return new ResponseContext().status(Response.Status.INTERNAL_SERVER_ERROR).entity( "Failed to process URL" );
