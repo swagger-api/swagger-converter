@@ -19,7 +19,6 @@ paths:
         description: "A URL to the swagger definition"
         required: true
         type: "string"
-        format: "uri"
       responses:
         200:
           description: "successfully converted schema"
