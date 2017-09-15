@@ -1,8 +1,8 @@
 package io.swagger.handler;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import io.swagger.inflector.models.RequestContext;
-import io.swagger.inflector.models.ResponseContext;
+import io.swagger.oas.inflector.models.RequestContext;
+import io.swagger.oas.inflector.models.ResponseContext;
 import io.swagger.parser.OpenAPIParser;
 import io.swagger.parser.models.SwaggerParseResult;
 import v2.io.swagger.util.Json;

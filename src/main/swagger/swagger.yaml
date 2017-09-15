@@ -1,66 +1,76 @@
 ---
-swagger: "2.0"
+openapi: 3.0.0
 info:
-  description: "Converts a 1.x, 2.0 swagger definition to the 3.0.0 format"
-  version: "1.0.0"
-  title: "Swagger Spec Converter"
+  title: Swagger Spec Converter
+  description: Converts a 1.x, 2.0 swagger definition to the 3.0.0 format
+  version: 1.0.0
+servers:
+- url: "/"
 paths:
-  /convert:
+  "/convert":
     get:
       tags:
-      - "Converter"
-      summary: "Convert a swagger definition"
-      description: "Converts the supplied payload to a 3.0 specification\nbased on\
-        \ a `url` parameter, which points to a older\nspecification version\n"
-      operationId: "convertByUrl"
+      - Converter
+      summary: Convert a swagger definition
+      description: |
+        Converts the supplied payload to a 3.0 specification
+        based on a `url` parameter, which points to a older
+        specification version
+      operationId: convertByUrl
       parameters:
-      - name: "url"
-        in: "query"
-        description: "A URL to the swagger definition"
-        required: true
-        type: "string"
-      responses:
-        200:
-          description: "successfully converted schema"
-          schema:
-            type: "object"
-            properties: {}
-        400:
-          description: "invaild input schema, or could not be converted\n"
-          schema:
-            type: "array"
-            description: "error messages"
-            items:
-              type: "string"
-      x-contentType: "application/json"
-      x-accepts: "application/json"
-    post:
-      tags:
-      - "Converter"
-      summary: "Convert a swagger definition"
-      description: "Converts the supplied payload to a 3.0 specification\nbased on\
-        \ an input specification\n"
-      operationId: "convertByContent"
-      parameters:
-      - in: "body"
-        name: "inputSpec"
-        description: "the specification to convert"
+      - name: url
+        in: query
+        description: A URL to the swagger definition
         required: true
         schema:
-          type: "object"
+          type: string
       responses:
-        200:
-          description: "successfully converted schema"
-          schema:
-            type: "object"
-            properties: {}
-        400:
-          description: "invaild input schema, or could not be converted\n"
-          schema:
-            type: "array"
-            description: "error messages"
-            items:
-              type: "string"
-      x-contentType: "application/json"
-      x-accepts: "application/json"
-definitions: {}
+        '200':
+          description: successfully converted schema
+          content:
+            "application/json":
+              schema:
+                type: object
+                properties: {}
+        '400':
+          description: 'invaild input schema, or could not be converted'
+          content:
+            "*/*":
+              schema:
+                type: array
+                description: error messages
+                items:
+                  type: string
+    post:
+      tags:
+      - Converter
+      summary: Convert a swagger definition
+      description: |
+        Converts the supplied payload to a 3.0 specification
+        based on an input specification
+      operationId: convertByContent
+      requestBody:
+        description: the specification to convert
+        content:
+          "*/*":
+            schema:
+              type: object
+        required: true
+      responses:
+        '200':
+          description: successfully converted schema
+          content:
+            "application/json":
+              schema:
+                type: object
+                properties: {}
+        '400':
+          description: 'invaild input schema, or could not be converted'
+          content:
+            "*/*":
+              schema:
+                type: array
+                description: error messages
+                items:
+                  type: string
+components: {}
