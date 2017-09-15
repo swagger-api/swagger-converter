@@ -32,6 +32,10 @@ paths:
               schema:
                 type: object
                 properties: {}
+            "application/yaml":
+              schema:
+                type: object
+                properties: {}
         '400':
           description: 'invaild input schema, or could not be converted'
           content:
@@ -52,15 +56,24 @@ paths:
       requestBody:
         description: the specification to convert
         content:
-          "*/*":
+          "application/json":
             schema:
               type: object
+              properties: {}
+          "application/yaml":
+            schema:
+              type: object
+              properties: {}
         required: true
       responses:
         '200':
           description: successfully converted schema
           content:
             "application/json":
+              schema:
+                type: object
+                properties: {}
+            "application/yaml":
               schema:
                 type: object
                 properties: {}

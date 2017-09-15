@@ -27,14 +27,9 @@ public class ConverterController {
             return new ResponseContext().status(Response.Status.BAD_REQUEST).entity(output.getMessages());
         }
 
-        MediaType outputType = MediaType.APPLICATION_JSON_TYPE;
 
-//        for(MediaType type: request.getAcceptableMediaTypes()) {
-//            if(type.getSubtype() != null && type.getSubtype().contains("yaml")) {
-//                outputType = new MediaType("application", "yaml");
-//            }
-//        }
-
+        MediaType outputType = getMediaType(request);
+        
         return new ResponseContext()
                 .contentType(outputType)
                 .entity(output.getOpenAPI());
@@ -54,15 +49,34 @@ public class ConverterController {
             return new ResponseContext().status(Response.Status.BAD_REQUEST).entity(output.getMessages());
         }
 
-        MediaType outputType = MediaType.APPLICATION_JSON_TYPE;
-//        for(MediaType type: request.getAcceptableMediaTypes()) {
-//            if(type.getSubtype() != null && type.getSubtype().contains("yaml")) {
-//                outputType = new MediaType("application", "yaml");
-//            }
-//        }
+        MediaType outputType = getMediaType(request);
+
         return new ResponseContext()
                 .contentType(outputType)
                 .entity(output.getOpenAPI());
+    }
+
+    private MediaType getMediaType(RequestContext request) {
+        MediaType outputType = MediaType.APPLICATION_JSON_TYPE;
+
+        boolean isJsonOK = false;
+        boolean isYamlOK = false;
+
+        MediaType yamlMediaType = new MediaType("application", "yaml");
+
+        for (MediaType mediaType : request.getAcceptableMediaTypes()) {
+            if (mediaType.equals(MediaType.APPLICATION_JSON_TYPE)) {
+                isJsonOK = true;
+            } else if (mediaType.equals(yamlMediaType)) {
+                isYamlOK = true;
+            }
+        }
+
+        if (isYamlOK && !isJsonOK) {
+            outputType = yamlMediaType;
+        }
+
+        return outputType;
     }
 }
 
