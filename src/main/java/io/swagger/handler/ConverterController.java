@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.swagger.oas.inflector.models.RequestContext;
 import io.swagger.oas.inflector.models.ResponseContext;
 import io.swagger.parser.OpenAPIParser;
-import io.swagger.parser.models.SwaggerParseResult;
-import v2.io.swagger.util.Json;
+import io.swagger.util.Json;
+import io.swagger.v3.parser.core.models.SwaggerParseResult;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
