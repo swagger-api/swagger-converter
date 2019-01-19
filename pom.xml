@@ -9,7 +9,7 @@
     <artifactId>oas-converter</artifactId>
     <packaging>war</packaging>
     <name>oas-converter</name>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <prerequisites>
         <maven>2.2.0</maven>
     </prerequisites>
