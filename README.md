@@ -1,8 +1,13 @@
-An online converter between 2.0 and 3.0 specifications.
-Publishes a docker container to `smartbear/oas-converter`,
-which runs a service on port 8080 listening for convert requests like `/api/convert?url=http://mydefinition.yaml`.
+Provides a converter between OpenAPI 2.0 and 3.0 specifications accessible via APIs and web UI. 
 
-You can see the swagger definition on `/api/openapi.json`
+It is available online at https://converter.swagger.io/ and as a [docker image](https://hub.docker.com/r/swaggerapi/oas-converter) e.g.:
+
+```
+docker pull swaggerapi/oas-converter:v1.0.0
+docker run -it -p 8080:8080 --name swagger-spec-converter swaggerapi/oas-converter:v1.0.0
+```
+
+Web UI is reachable at http://localhost:8080/index.html and OpenAPI spec at http://localhost:8080/api/openapi.json
 
 ## Security contact
 
