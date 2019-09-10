@@ -9,7 +9,7 @@
     <artifactId>swagger-converter</artifactId>
     <packaging>war</packaging>
     <name>swagger-converter</name>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <prerequisites>
         <maven>2.2.0</maven>
     </prerequisites>
