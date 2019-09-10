@@ -6,9 +6,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.swagger</groupId>
-    <artifactId>oas-converter</artifactId>
+    <artifactId>swagger-converter</artifactId>
     <packaging>war</packaging>
-    <name>oas-converter</name>
+    <name>swagger-converter</name>
     <version>1.0.1-SNAPSHOT</version>
     <prerequisites>
         <maven>2.2.0</maven>
@@ -171,7 +171,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-yaml-provider</artifactId>
-            <version>2.9.5</version>
+            <version>2.9.9</version>
         </dependency>
 
     </dependencies>
@@ -186,8 +186,8 @@
     </repositories>
     <properties>
         <maven-plugin-version>1.0.0</maven-plugin-version>
-        <swagger-parser-version>2.0.8</swagger-parser-version>
-        <swagger-inflector-version>2.0.0-rc3</swagger-inflector-version>
+        <swagger-parser-version>2.0.9</swagger-parser-version>
+        <swagger-inflector-version>2.0.3</swagger-inflector-version>
         <jetty-version>9.4.9.v20180320</jetty-version>
         <logback-version>1.0.1</logback-version>
         <junit-version>4.8.2</junit-version>
