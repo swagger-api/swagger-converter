@@ -171,7 +171,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-yaml-provider</artifactId>
-            <version>2.9.10</version>
+            <version>2.12.5</version>
         </dependency>
 
     </dependencies>
@@ -186,8 +186,8 @@
     </repositories>
     <properties>
         <maven-plugin-version>1.0.0</maven-plugin-version>
-        <swagger-parser-version>2.0.15</swagger-parser-version>
-        <swagger-inflector-version>2.0.4</swagger-inflector-version>
+        <swagger-parser-version>2.0.27</swagger-parser-version>
+        <swagger-inflector-version>2.0.6</swagger-inflector-version>
         <jetty-version>9.4.9.v20180320</jetty-version>
         <logback-version>1.0.1</logback-version>
         <junit-version>4.8.2</junit-version>
