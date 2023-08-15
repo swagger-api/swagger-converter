@@ -31,8 +31,8 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git://github.com/HugoMario/swagger-converter.git</connection>
-        <developerConnection>scm:git:ssh://github.com:HugoMario/swagger-converter.git</developerConnection>
+        <connection>scm:git:git://github.com/swagger-api/swagger-converter.git</connection>
+        <developerConnection>scm:git:ssh://github.com:swagger-api/swagger-converter.git</developerConnection>
         <url>http://github.com/HugoMario/swagger-converter/tree/main</url>
     </scm>
     <developers>
