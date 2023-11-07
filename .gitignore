@@ -12,3 +12,9 @@ atlassian-ide-plugin.xml
 *.iml
 .java-version
 sonar-project.properties
+*.ipr
+*.iws
+.DS_Store
+dependency-reduced-pom.xml
+*.pyc
+/bin/
