@@ -3,8 +3,8 @@ Provides a converter between OpenAPI 2.0 and 3.0 specifications accessible via A
 It is available online at https://converter.swagger.io/ and as a [docker image](https://hub.docker.com/r/swaggerapi/swagger-converter) e.g.:
 
 ```
-docker pull swaggerapi/swagger-converter:v1.0.2
-docker run -it -p 8080:8080 --name swagger-converter swaggerapi/swagger-converter:v1.0.2
+docker pull swaggerapi/swagger-converter:v1.0.3
+docker run -it -p 8080:8080 --name swagger-converter swaggerapi/swagger-converter:v1.0.3
 ```
 
 Web UI is reachable at http://localhost:8080/index.html and OpenAPI spec at http://localhost:8080/api/openapi.json
