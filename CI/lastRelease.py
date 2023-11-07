@@ -7,9 +7,9 @@ def getLastReleaseTag():
     for l in content:
         draft = l["draft"]
         tag = l["tag_name"]
-        if str(draft) != 'True' and tag.startswith("v2"):
+        if str(draft) != 'True' and tag.startswith("v1"):
             return tag[1:]
-    return "v1.0.3"
+    return "1.0.3"
 # main
 def main():
     result = getLastReleaseTag()
