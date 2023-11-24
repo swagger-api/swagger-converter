@@ -327,7 +327,7 @@
     <properties>
         <maven.compiler.release>8</maven.compiler.release>
         <maven-plugin-version>1.0.0</maven-plugin-version>
-        <swagger-parser-version>2.1.18</swagger-parser-version>
+        <swagger-parser-version>2.1.19</swagger-parser-version>
         <swagger-inflector-version>2.0.10</swagger-inflector-version>
         <jetty-version>9.4.53.v20231009</jetty-version>
         <logback-version>1.0.1</logback-version>
