@@ -9,7 +9,7 @@
     <artifactId>swagger-converter</artifactId>
     <packaging>war</packaging>
     <name>swagger-converter</name>
-    <version>1.0.4</version>
+    <version>1.0.5-SNAPSHOT</version>
     <prerequisites>
         <maven>2.2.0</maven>
     </prerequisites>
@@ -327,10 +327,10 @@
     <properties>
         <maven.compiler.release>8</maven.compiler.release>
         <maven-plugin-version>1.0.0</maven-plugin-version>
-        <swagger-parser-version>2.1.18</swagger-parser-version>
-        <swagger-inflector-version>2.0.10</swagger-inflector-version>
+        <swagger-parser-version>2.1.22</swagger-parser-version>
+        <swagger-inflector-version>2.0.12</swagger-inflector-version>
         <jetty-version>9.4.53.v20231009</jetty-version>
-        <logback-version>1.0.1</logback-version>
+        <logback-version>1.5.3</logback-version>
         <junit-version>4.13.2</junit-version>
         <slf4j-version>2.0.9</slf4j-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
